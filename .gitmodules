@@ -1,0 +1,3 @@
+[submodule "cider-ci"]
+	path = cider-ci
+	url = https://github.com/cider-ci/cider-ci
