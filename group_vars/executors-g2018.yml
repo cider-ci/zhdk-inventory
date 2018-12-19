@@ -1,0 +1,12 @@
+ci_executor_ramdisk_setup: no
+
+ci_executor_custom_traits:
+  - g2018
+  - fastest-executors
+
+ci_executor_trait_lxd: yes
+ci_executor_trait_xorg: yes
+
+# TMP: those traits are broken
+ci_executor_trait_gpg: false
+ci_executor_trait_wine: false

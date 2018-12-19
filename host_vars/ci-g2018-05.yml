@@ -1,0 +1,4 @@
+ci_executor_max_load: 16
+
+ansible_host: ci-g2018-05.byod.zhdk.ch
+ansible_user: root
