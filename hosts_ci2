@@ -18,6 +18,16 @@ ci-g2016-06
 ci-g2016-07
 ci-g2016-08
 
+[executors-g2018]
+ci-g2018-01
+ci-g2018-02
+ci-g2018-03
+ci-g2018-04
+ci-g2018-05
+ci-g2018-06
+ci-g2018-07
+ci-g2018-08
+
 [zhdk-vm-executors]
 ci-executor.madek
 
@@ -25,17 +35,20 @@ ci-executor.madek
 cider-ci_server
 executors-g2012
 executors-g2016
+executors-g2018
 zhdk-vm-executors
 
 [cider-ci_hosts:children]
 cider-ci_server
 executors-g2012
 executors-g2016
+executors-g2018
 zhdk-vm-executors
 
 [test-executors:children]
 executors-g2012
 executors-g2016
+executors-g2018
 
 [cider-ci_executors:children]
 test-executors
