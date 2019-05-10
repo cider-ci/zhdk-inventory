@@ -2,3 +2,5 @@ ci_executor_max_load: 8
 
 ansible_host: ci-g2016-06.byod.zhdk.ch
 ansible_user: root
+
+ci_executor_trait_lxd: yes

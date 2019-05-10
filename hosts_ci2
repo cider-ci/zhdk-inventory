@@ -54,6 +54,9 @@ executors-g2018
 test-executors
 zhdk-vm-executors
 
+[executors:children]
+cider-ci_executors
+
 [secrets:children]
 cider-ci_hosts
 

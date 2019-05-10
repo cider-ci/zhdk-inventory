@@ -22,6 +22,7 @@ ci_executor_trait_phantomjs: true
 ci_executor_trait_postgresql: true
 ci_executor_trait_rbenv: false
 ci_executor_trait_ruby_install: true
+ci_executor_trait_s3_cache: true
 ci_executor_trait_sqlite: true
 ci_executor_trait_ssh_keys: true
 ci_executor_trait_ubuntu_desktop: true

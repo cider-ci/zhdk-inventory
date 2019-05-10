@@ -1,0 +1,10 @@
+name: CIDER_CI/ZHdK-inventory
+windows:
+  2: 
+    name: 'ssh'
+    command: |
+      # ssh -AJ root@ci.zhdk.ch root@ci-g2016-08.byod.zhdk.ch
+  5:
+    name: 'ansible'
+    command: |
+      # ansible executors -i hosts_ci2  -a 'reboot' --ssh-common-args '-o ProxyCommand="ssh -W %h:%p -q root@ci.zhdk.ch"'
