@@ -12,4 +12,5 @@ ci_executor_trait_xorg: yes
 ci_executor_trait_gpg: yes
 ci_executor_trait_wine: yes
 
+ci_executor_trait_postgresql11: yes
 

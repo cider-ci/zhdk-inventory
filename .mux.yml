@@ -7,4 +7,5 @@ windows:
   5:
     name: 'ansible'
     command: |
-      # ansible executors -i hosts_ci2  -a 'reboot' --ssh-common-args '-o ProxyCommand="ssh -W %h:%p -q root@ci.zhdk.ch"'
+      # ansible all -i hosts_ci2 -m raw -a 'DEBIAN_FRONTEND=noninteractive apt dist-upgrade -q --yes --force-yes'
+      # ansible executors -i hosts_ci2  -a 'reboot' --ssh-common-args '-o ProxyCommand="ssh -W %h:%p -q root@ci-gw.zhdk.ch"'

@@ -6,3 +6,5 @@ ci_executor_ramdisk_size: 20G
 ci_executor_trait_lxd: no
 ci_executor_trait_wine: yes
 ci_executor_trait_xorg: yes
+
+ci_executor_trait_postgresql9: true
