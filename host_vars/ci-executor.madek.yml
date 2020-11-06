@@ -11,6 +11,7 @@ executor_accepted_repositories:
 - https://github.com/cider-ci/cider-ci
 - https://github.com/SusanneSchumacher/demo.madek.zhdk.ch.git
 - https://github.com/eins78/street.ars.is
+- https://github.com/Madek/madek-spiel.kiste.li_hosting
 
 ci_executor_trait_ansible: true
 ci_executor_trait_git_crypt: true
