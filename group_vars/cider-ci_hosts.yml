@@ -7,6 +7,5 @@ ci_ssh_keys:
   - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
   - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
   - "{{lookup('file', inventory_dir + '/ssh_keys/nimaai')}}"
-  - "{{lookup('file', inventory_dir + '/ssh_keys/phiku')}}"
 
 ci_removed_ssh_keys: []

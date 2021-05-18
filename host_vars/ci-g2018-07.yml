@@ -1,4 +1,2 @@
-ci_executor_max_load: 16
-
-ansible_host: ci-g2018-07.byod.zhdk.ch
-ansible_user: root
+ansible_host: '2a02:169:502::c18'
+ansible_ssh_common_args: NULL

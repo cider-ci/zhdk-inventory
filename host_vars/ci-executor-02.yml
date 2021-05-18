@@ -9,3 +9,5 @@ netmask: 255.255.255.0
 gateway: 10.157.2.1
 dns-nameservers: 10.158.0.53
 dns-search: zhdk.ch
+
+ci_executor_trait_postgresql11: yes

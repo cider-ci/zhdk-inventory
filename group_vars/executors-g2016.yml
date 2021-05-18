@@ -1,3 +1,7 @@
+ansible_user: root
+
+ci_executor_max_load: 8
+
 ci_executor_custom_traits:
   - g2016
 
@@ -7,4 +11,3 @@ ci_executor_trait_lxd: no
 ci_executor_trait_wine: yes
 ci_executor_trait_xorg: yes
 
-ci_executor_trait_postgresql9: true

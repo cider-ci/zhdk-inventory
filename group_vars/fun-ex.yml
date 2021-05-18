@@ -1,0 +1,5 @@
+executor_accepted_repositories:
+- https://github.com/functional-swiss/leihs-saas-inventory.git
+
+ci_executor_custom_traits:
+- fun-ex

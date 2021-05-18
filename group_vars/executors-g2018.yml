@@ -1,3 +1,6 @@
+ansible_user: root
+
+ci_executor_max_load: 12
 ci_executor_ramdisk_setup: yes
 ci_executor_ramdisk_size: 4000m
 
@@ -5,12 +8,10 @@ ci_executor_working_dir: /tmp/ci-working-dir
 
 ci_executor_custom_traits:
   - g2018
-  - fastest-executors
 
 ci_executor_trait_lxd: no
 ci_executor_trait_xorg: yes
 ci_executor_trait_gpg: yes
 ci_executor_trait_wine: yes
 
-ci_executor_trait_postgresql11: yes
-
+ci_executor_trait_postgresql11: no

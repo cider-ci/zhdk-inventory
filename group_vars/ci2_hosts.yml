@@ -1,2 +1,3 @@
 ci_server_external_hostname: ci.zhdk.ch
 ci_server_base_url: https://{{ ci_server_external_hostname }}
+# ansible_ssh_common_args: '-o ProxyCommand="ssh -W %h:%p -q root@ci-gw.zhdk.ch"'
