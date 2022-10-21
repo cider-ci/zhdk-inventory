@@ -17,6 +17,7 @@ ci_executor_trait_misc: true
 ci_executor_trait_mysql: false
 ci_executor_trait_mysql_variant: mariadb
 ci_executor_trait_nodejs: false
+ci_executor_trait_nvm: true
 ci_executor_trait_openjdk: true
 ci_executor_trait_phantomjs: true
 ci_executor_trait_postgresql10: true

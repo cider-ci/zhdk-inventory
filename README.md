@@ -50,4 +50,7 @@ Examples
 
 ### Traits
 
+
     ./bin/executors-traits -l executors-ax101
+
+    ./bin/executors-traits -l ci-ax101-01 -t ci_executor_trait_nvm
