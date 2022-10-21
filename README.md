@@ -23,6 +23,11 @@ Examples
 --------
 
 
+### Setup remote authorized ssh key
+
+    ssh-copy-id root@REMOTE_HOST
+
+
 ### Ping
 
     ansible -i hosts_ci2.yml executors -m ping
@@ -36,6 +41,13 @@ Examples
 
     ansible -i hosts_ci2.yml test-executors -a 'apt -y full-upgrade'
 
-####
+### Install
 
-    ansible-playbook ../../cider-ci_v5/deploy/executors-deploy_play.yml -i hosts_ci2.yml -l ci-g2018-07
+    ./bin/executors-deploy -l executors-ax101
+    ./bin/executors-deploy -l 'ci-executor.madek'
+
+
+
+### Traits
+
+    ./bin/executors-traits -l executors-ax101

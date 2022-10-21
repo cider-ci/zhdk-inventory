@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+INVENTORY_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" ; cd .. > /dev/null 2>&1 && pwd -P)"
+
+echo '✪ virtualenv: preparing…   [if this fails, run `./bin/virtualenv-install` to debug]'
+
+source ${INVENTORY_DIR}/bin/virtualenv-install -qqq &>/dev/null \
+  || source ${INVENTORY_DIR}/bin/virtualenv-install \
+  || exit 1
+
+echo '✪ virtualenv: OK'

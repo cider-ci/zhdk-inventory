@@ -18,6 +18,7 @@ ci_executor_trait_gpg: true
 ci_executor_trait_leiningen: true
 ci_executor_trait_nodejs: true
 ci_executor_trait_ubuntu_desktop: false
+ci_executor_trait_docker: false
 
 # this is a vm
 ci_ntp_setup: false

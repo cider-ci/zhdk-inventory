@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+INVENTORY_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" ; cd .. > /dev/null 2>&1 && pwd -P)"
+
+source ${INVENTORY_DIR}/bin/virtualenv-activate || exit 1
+
+
+${INVENTORY_DIR}/bin/ansible-playbook cider-ci/deploy/traits_play.yml -i hosts_ci2.yml  "$@"
