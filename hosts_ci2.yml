@@ -31,11 +31,30 @@ all:
     executors:
       children:
         test-executors:
-        deploy-executors:
+        deploy_executors:
 
-    deploy-executors:
+    deploy_executors:
       hosts:
-        ci-executor.madek:
+        ci-executor-madek:
+          ci_executor_trait_docker: false
+        ci-executor-leihs:
+          ci_executor_custom_traits:
+            - zhdk-leihs-deploy
+          ci_executor_trait_docker: true
+
+      vars:
+        ci_executor_trait_asdf: true
+        ci_executor_trait_asdf_nodejs: false
+        ci_executor_trait_asdf_ruby: false
+        ci_executor_trait_git_crypt: true
+        ci_executor_trait_python3: true
+        ci_executor_trait_ssh_keys: true
+        trait_ssh_key_files:
+          - src: "{{inventory_dir}}/secrets/zhdk_ci_executor_rsa"
+            filename: zhdk_ci_executor_rsa
+        ci_executor_trait_gpg: true
+        gpg_import_keys:
+          - "{{ inventory_dir + '/ci-executor.gpg.secret.asc' }}"
 
     test-executors:
       children:
@@ -72,20 +91,25 @@ all:
         ci-g2018-08:
 
 
+
     executors-ax101:
-      vars:
-        ci_executor_custom_traits: ['ax101']
-        ci_executor_max_load: 16
-        ci_executor_trait_docker: true
+      # the vars dont work here, seems they are shadowed
+      vars: {}
       hosts:
         ci-ax101-01:
+          ansible_host: 135.181.130.45
+          vars:
+            ci_executor_trait_lxd: no
         ci-ax101-02:
+          ansible_host: 65.109.66.136
+        ci-ax101-03:
+          ansible_host: 65.109.57.183
+        ci-ax101-04:
+          ansible_host: 65.109.35.47
+        ci-ax101-05:
+          ansible_host: 65.109.66.137
+        ci-ax101-06:
+          ansible_host: 65.109.66.138
 
-  hosts:
-    ci-ax101-01:
-      ansible_host: "{{os['ci-ax101-01']['ip']}}"
-      root_password: "{{os['ci-ax101-01']['root_password']}}"
-    ci-ax101-02:
-      ansible_host: "{{os['ci-ax101-02']['ip']}}"
-      root_password: "{{os['ci-ax101-02']['root_password']}}"
+
 

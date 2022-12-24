@@ -1,40 +1,34 @@
-ci_executor_ramdisk_setup: no
+# ci_executor_ramdisk_setup: no
 # ci_executor_working_dir: /ramdisk/ci-working-dir
 # ci_executor_trait_postgresql_data_dir: /ramdisk/cider-ci_executor_trait_postgresql-{{ci_executor_trait_postgresql_version}}_data
 
 ci_executor_trial_retention_duration: 15 seconds
 ci_executor_daily_reboot: yes
 
-ci_executor_trait_ansible: true
 ci_executor_trait_apache2: true
-ci_executor_trait_bower: false
-ci_executor_trait_chruby: true
+ci_executor_trait_asdf: true
+ci_executor_trait_asdf_nodejs: false
+ci_executor_trait_asdf_ruby: false
 ci_executor_trait_firefox_esr: true
 ci_executor_trait_git_crypt: true
 ci_executor_trait_gpg: true
-ci_executor_trait_leiningen: true
+ci_executor_trait_leiningen: false
 ci_executor_trait_misc: true
-ci_executor_trait_mysql: false
-ci_executor_trait_mysql_variant: mariadb
-ci_executor_trait_nodejs: false
-ci_executor_trait_nvm: true
+ci_executor_trait_nvm: false
 ci_executor_trait_openjdk: true
-ci_executor_trait_phantomjs: true
 ci_executor_trait_postgresql10: true
-ci_executor_trait_python38: true
-ci_executor_trait_rbenv: false
-ci_executor_trait_ruby_install: true
-ci_executor_trait_s3_cache: false
+ci_executor_trait_python3: true
 ci_executor_trait_sqlite: true
 ci_executor_trait_ssh_keys: false
+ci_executor_trait_translation_tools: true
 ci_executor_trait_ubuntu_desktop: false
 
 # gpg_import_keys:
 #  - "{{ inventory_dir + '/ci-executor.gpg.secret.asc' }}"
 
-trait_ssh_key_files:
-  - src: "{{inventory_dir}}/secrets/zhdk_ci_executor_rsa"
-    filename: zhdk_ci_executor_rsa
+#trait_ssh_key_files:
+#  - src: "{{inventory_dir}}/secrets/zhdk_ci_executor_rsa"
+#    filename: zhdk_ci_executor_rsa
 
 trait_ssh_remove_authorized_host_keys:
   - '|1|vZ9trhT0AQ6rHyuhrl4G50wtcM8=|rNnW9eWnbZzJsi0bHcRmtpQAUN0= ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1Kmn7dbcQoTJoYYld0/OJVFKKIYtOgyFVyNqcr3b588k0DRa63XQzCI/ToFcoEZl20/dEJOROpiLwY6vRXWtvbwV4JZGWEmvzC8IkuPVXdH31vWP/KbP5ug0b/q/RS5MWX2QbxAssU61B6FTgp31TOtjk3+rz6G8lerUv5CuVuBLmeXB2fInvWkygyowBja+uNVLdKNJ1d5BXPwEhJG4NZgvHns7XWiMxtO80I7vnRggUCMhVZH+2/xiUABLWIwU95IOl+kqqgArbuO/EQi/Z34CQCOYLxQuVMeJYnDpeDYUC7sAYUwhXwAKVxTdCryxZbjsw8hfP1z70IiCijTQX'

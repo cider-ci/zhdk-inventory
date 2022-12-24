@@ -46,11 +46,19 @@ Examples
     ./bin/executors-deploy -l executors-ax101
     ./bin/executors-deploy -l 'ci-executor.madek'
 
-
-
 ### Traits
 
 
     ./bin/executors-traits -l executors-ax101
+    ./bin/executors-traits -l ci-ax101-01 -t ci_executor_trait_lxd
 
-    ./bin/executors-traits -l ci-ax101-01 -t ci_executor_trait_nvm
+
+#### Reinstall Trait example
+
+clean docker completely, reboot (cleans tmp cache), and then reinstall the trait:
+
+    ./bin/ansible executors-ax101 -i hosts_ci2.yml -m ansible.builtin.shell -a 'apt purge docker-ce docker-ce-cli docker-ce-rootless-extras docker-compose-plugin docker -y && rm -rf /var/lib/docker && reboot'
+    ./bin/executors-traits -l executors-ax101 -t ci_executor_trait_docker
+
+
+

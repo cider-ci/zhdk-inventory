@@ -1,0 +1,8 @@
+ci_executor_custom_traits: ['ax101']
+ci_executor_trait_lxd: true
+ci_executor_max_load: 12
+ci_executor_trait_docker: true
+ci_executor_ramdisk_setup: true
+ci_executor_ramdisk_size: 32G
+ci_executor_working_dir: /ramdisk/ci-working-dir
+ci_executor_trait_postgresql_data_dir: /ramdisk/cider-ci_executor_trait_postgresql-{{ci_executor_trait_postgresql_version}}_data

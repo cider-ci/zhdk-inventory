@@ -9,14 +9,9 @@ ansible_user: root
 executor_accepted_repositories:
 - https://github.com/Madek/madek
 - https://github.com/cider-ci/cider-ci
-- https://github.com/SusanneSchumacher/demo.madek.zhdk.ch.git
-- https://github.com/eins78/street.ars.is
 
-ci_executor_trait_ansible: true
 ci_executor_trait_git_crypt: true
 ci_executor_trait_gpg: true
-ci_executor_trait_leiningen: true
-ci_executor_trait_nodejs: true
 ci_executor_trait_ubuntu_desktop: false
 ci_executor_trait_docker: false
 
