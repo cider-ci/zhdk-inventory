@@ -1,0 +1,18 @@
+ci_executor_max_load: 3
+
+ci_executor_trial_retention_duration: 1 Second
+ci_executor_daily_reboot: yes
+
+ansible_host: ci-executor-madek.ruby.zhdk.ch
+ansible_user: root
+
+executor_accepted_repositories:
+- https://github.com/Madek/madek
+
+ci_executor_trait_git_crypt: true
+ci_executor_trait_gpg: true
+ci_executor_trait_ubuntu_desktop: false
+ci_executor_trait_docker: false
+
+# this is a vm
+ci_ntp_setup: false

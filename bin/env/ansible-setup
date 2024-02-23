@@ -1,0 +1,7 @@
+INVENTORY_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" ; cd ../.. > /dev/null 2>&1 && pwd -P)"
+$INVENTORY_DIR/bin/env/python-setup
+python -m venv ${INVENTORY_DIR}/.venv
+source ${INVENTORY_DIR}/.venv/bin/activate
+pip install -r ${INVENTORY_DIR}/ansible-requirements.txt
+
+# vi: ft=sh

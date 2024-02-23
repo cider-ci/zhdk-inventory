@@ -8,6 +8,8 @@ ansible_user: root
 
 executor_accepted_repositories:
 - https://github.com/leihs/leihs
+- https://github.com/zhdk/leihs-server-inventory
+- https://github.com/zhdk/leihs-server-inventory.git
 
 
 # this is a vm

@@ -37,6 +37,12 @@ all:
       hosts:
         ci-executor-madek:
           ci_executor_trait_docker: false
+        ci-executor-madek-2024:
+          ci_executor_trait_docker: false
+          ci_executor_custom_traits:
+            - ci-executor.madek
+            - zhdk-madek-deploy
+            - madek-repo-decryption
         ci-executor-leihs:
           ci_executor_custom_traits:
             - zhdk-leihs-deploy

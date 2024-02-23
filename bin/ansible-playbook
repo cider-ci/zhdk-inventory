@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-DEPLOY_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" ; cd .. > /dev/null 2>&1 && pwd -P)"
-
-source ${DEPLOY_DIR}/bin/virtualenv-activate || exit 1
+INVENTORY_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" ; cd .. > /dev/null 2>&1 && pwd -P)"
+source ./$INVENTORY_DIR/bin/ansible-setup
 
 ansible-playbook "$@"
