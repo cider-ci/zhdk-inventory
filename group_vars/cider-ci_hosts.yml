@@ -5,7 +5,8 @@ ci_vim_mode: true
 
 ci_ssh_keys:
   - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
-  - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/jan')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/mradl')}}"
   - "{{lookup('file', inventory_dir + '/ssh_keys/nimaai')}}"
   - "{{lookup('file', inventory_dir + '/ssh_keys/uvb')}}"
 

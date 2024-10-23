@@ -10,7 +10,7 @@ executor_accepted_repositories:
 - https://github.com/leihs/leihs
 - https://github.com/zhdk/leihs-server-inventory
 - https://github.com/zhdk/leihs-server-inventory.git
-
+- https://github.com/leihs/leihs-instance
 
 # this is a vm
 ci_ntp_setup: false

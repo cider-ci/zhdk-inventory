@@ -7,7 +7,8 @@ ansible_host: ci-executor-madek.ruby.zhdk.ch
 ansible_user: root
 
 executor_accepted_repositories:
-- https://github.com/Madek/madek
+  - https://github.com/Madek/madek
+  - https://github.com/Madek/madek-exporter
 
 ci_executor_trait_git_crypt: true
 ci_executor_trait_gpg: true
