@@ -99,8 +99,11 @@ all:
 
 
     executors-ax101:
-      # the vars dont work here, seems they are shadowed
+      # the vars dont work here as expected <- precedence rules
+      # see leihs or madek for working around this issue
+      # for now we just use the group_vars
       vars: {}
+
       hosts:
         ci-ax101-01:
           ansible_host: 135.181.130.45
@@ -114,8 +117,22 @@ all:
           ansible_host: 65.109.35.47
         ci-ax101-05:
           ansible_host: 65.109.66.137
+
         ci-ax101-06:
           ansible_host: 65.109.66.138
+          ci_executor_trait_lxd: no
+          ci_executor_trait_incus: yes
 
+        ci-ax101-07:
+          ansible_host: 65.109.64.58
+          ci_ntp_setup: false
+          ci_executor_trait_lxd: no
+          ci_executor_trait_incus: yes
+
+        ci-ax101-08:
+          ansible_host: 65.109.69.181
+          ci_ntp_setup: false
+          ci_executor_trait_lxd: no
+          ci_executor_trait_incus: yes
 
 

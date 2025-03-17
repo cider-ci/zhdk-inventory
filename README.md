@@ -44,3 +44,17 @@ clean docker completely, reboot (cleans tmp cache), and then reinstall the trait
 
 
 
+###
+
+ CPU1: AMD Ryzen 9 5950X 16-Core Processor (Cores 32)
+   Memory:  128755 MB
+   Disk /dev/nvme0n1: 3840 GB (=> 3576 GiB) doesn't contain a valid partition table
+   Disk /dev/nvme1n1: 3840 GB (=> 3576 GiB) doesn't contain a valid partition table
+   Total capacity 7153 GiB with 2 Disks
+
+Network data:
+   eth0  LINK: yes
+         MAC:  a8:a1:59:c1:44:b6
+         IP:   65.109.69.181
+         IPv6: 2a01:4f9:5a:4620::2/64
+         Intel(R) Gigabit Ethernet Network Driver
