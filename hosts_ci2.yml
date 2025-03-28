@@ -109,8 +109,12 @@ all:
           ansible_host: 135.181.130.45
           vars:
             ci_executor_trait_lxd: no
+
         ci-ax101-02:
           ansible_host: 65.109.66.136
+          ci_executor_trait_lxd: no
+          ci_executor_trait_incus: yes
+
         ci-ax101-03:
           ansible_host: 65.109.57.183
         ci-ax101-04:
